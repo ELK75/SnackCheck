@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Header from './components/Header';
 import StartScreen from './Screens/StartScreen';
 import PreferenceScreen from './Screens/PreferenceScreen';
 import MainMenuScreen from './Screens/MainMenuScreen';
 
+import getFoodData from './apiWrapper/Spoonacular';
+
 export default function App() {
-  const [userPressStart, setUserPressStart] = useState(true);
-  const [userProvidedPreferences, setUserProvidedPreferences] = useState(true);
+  const [userPressStart, setUserPressStart] = useState(false);
+  const [userProvidedPreferences, setUserProvidedPreferences] = useState(false);
+  const [foodData, setFoodData] = useState();
 
   const [userPreferences, setUserPreferences] = useState({
     'Vegan': false, 'Low Fat': false, 'Low Carb': false, 'High Protein': false,
@@ -21,10 +24,6 @@ export default function App() {
     })
   }
 
-  const [menuSelected, setMenuSelected] = useState(false);
-  const [mealPlanSelected, setMealPlanSelected] = useState(false);
-  const [cameraSelected, setCameraSelected] = useState(false);
-
   const startPressHandler = () => {
     setUserPressStart(true);
   }
@@ -35,7 +34,7 @@ export default function App() {
   } else if (userPressStart && !userProvidedPreferences) {
     content = <PreferenceScreen preferenceProvided={() => setUserProvidedPreferences(true)} userPreferences={updatePreferences}/>
   } else if (userProvidedPreferences) {
-    content = <MainMenuScreen />
+    content = <MainMenuScreen userPreferences={userPreferences} userProvidedPreferences={userProvidedPreferences} setUserProvidedPreferences={setUserProvidedPreferences}/>
   }
 
   return (

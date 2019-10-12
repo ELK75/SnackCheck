@@ -13,9 +13,9 @@ const Footer = (props) => {
         <View style={{alignItems: 'center', height: 50, borderBottomWidth: props.currentPage === 'meal' ? 1 : 0, borderColor: Color.primary }}><Image style={styles.logo} source={require('../assets/meal-icon.png')}></Image></View>
       </TouchableWithoutFeedback>
 
-      <TouchableWithoutFeedback style={{flex: 1}} onPress={() => props.setCurrentPage('camera')}>
-        <View style={{alignItems: 'center',  height: 50, borderBottomWidth: props.currentPage === 'camera' ? 1 : 0, borderColor: Color.primary }}><Image style={styles.logo} source={require('../assets/camera-icon.png')}></Image></View>
-      </TouchableWithoutFeedback>
+      {/* <TouchableWithoutFeedback style={{flex: 1}} onPress={() => props.setCurrentPage('camera')}> */}
+        {/* <View style={{alignItems: 'center',  height: 50, borderBottomWidth: props.currentPage === 'camera' ? 1 : 0, borderColor: Color.primary }}><Image style={styles.logo} source={require('../assets/camera-icon.png')}></Image></View> */}
+      {/* </TouchableWithoutFeedback> */}
     </View>
   )
 }

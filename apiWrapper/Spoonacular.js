@@ -1,5 +1,5 @@
 
-function getFoodData(preferences, apiKey) {
+async function getFoodData(preferences, apiKey) {
     var intolerances = '';
 
     var veganVal = preferences['Vegan'];
@@ -53,19 +53,11 @@ function getFoodData(preferences, apiKey) {
     if(veganVal===true){
         intolerances = intolerances + '&diet=vegan';
     }
-
-    console.log(intolerances);
-    console.log(apiKey);
-    let myJson;
-    const request = async () => {
-        const response = await fetch('https://api.spoonacular.com/recipes/complexSearch?intolerances='+intolerances+'&apiKey='+apiKey);
-        myJson = await response.json();
-        console.log(myJson);
-    }
-    request();
-
-    return myJson;
-    // return json object
+    const intolerancesString = intolerances ? "intolerances="+intolerances + "&": "excludeCuisine=italian&";
+    const apiSearch = `https://api.spoonacular.com/recipes/complexSearch?${intolerancesString}apiKey=${apiKey}&addRecipeInformation=true`;
+    console.log(apiSearch);
+    const response = await fetch(apiSearch);
+    return await response.json();
 }
 
 export default getFoodData;
