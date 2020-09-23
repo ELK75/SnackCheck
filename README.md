@@ -10,4 +10,4 @@
 
 ### App Walkthrough
 
-<img src="https://github.com/ELK75/SnackCheck/blob/master/demoWithOverlay.gif" width=1000><br>
+<img src="https://github.com/ELK75/SnackCheck/blob/master/demoWithOverlay.gif" width=600 margin=auto><br>
