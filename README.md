@@ -8,6 +8,5 @@
 
   <p align="center">Our app allows users to find a list of recipes that they can cook based on their dietary restrictions.  Simply select your restrictions/needs and our app will generate a list of recipes that adhere to it.<p>
 
-### App Walkthrough
-
+<p align="center" font-size="20px"><b >App Walkthrough</b></p>
 <div align="center"><img src="https://github.com/ELK75/SnackCheck/blob/master/demoWithOverlay.gif" width=800><div>
