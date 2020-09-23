@@ -6,7 +6,7 @@
 
 ### Description
 
-  Our app allows users to find a list of recipes that they can cook based on their dietary restrictions.  Simply select your restrictions/needs and our app will generate a list of recipes that adhere to it.
+  <p align="center">Our app allows users to find a list of recipes that they can cook based on their dietary restrictions.  Simply select your restrictions/needs and our app will generate a list of recipes that adhere to it.<p>
 
 ### App Walkthrough
 
