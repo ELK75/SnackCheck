@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     fontSize: 18
   },
   card: {
-    height: 45,
+    height: 35,
     width: '100%',
     justifyContent: 'center',
     fontSize: 35

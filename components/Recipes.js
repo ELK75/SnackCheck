@@ -4,7 +4,6 @@ import Recipe from "./Recipe"
 
 
 const Recipes = ({recipeList}) => {
-  console.log(recipeList);
   let recipeListComponents = recipeList.results.map((recipe) => {
       return <Recipe onPressProp={()=> {Linking.openURL(recipe.sourceUrl) }} key={recipe.id} recipeImage={recipe.image} title={recipe.title}></Recipe>});
   // let recipeListComponents = <Recipe recipeImage={recipe}
