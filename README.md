@@ -1,4 +1,4 @@
-                                                                                    ## SnackCheck
+## SnackCheck
 
 <p align="center" font-size="20px"><b >Goal</b></p>
 
